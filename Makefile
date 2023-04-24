@@ -23,5 +23,6 @@ daemon_prod:
 
 run_prod: dagit_prod daemon_prod
 
-dependencies:
+setup:
+	pip install dagster notebook
 	pip install -e ".[dev]"
