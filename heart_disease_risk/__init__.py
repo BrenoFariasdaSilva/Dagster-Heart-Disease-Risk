@@ -1,0 +1,1 @@
+from .repository import heart_disease_risk as heart_disease_risk

@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="tutorial_template_assets",
+    name="heart_disease_risk_assets",
     packages=find_packages(exclude=["heart_disease_risk_assets"]),
     install_requires=[
         "dagster",

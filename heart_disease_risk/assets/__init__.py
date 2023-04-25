@@ -4,6 +4,8 @@ from papermill_origami.noteable_dagstermill import define_noteable_dagster_asset
 
 from dagster import AssetIn, Field, Int, asset, file_relative_path
 
+import repository
+
 # The code below create a Dagster asset of the heart disease risk dataset
 # relevant documentation - https://docs.dagster.io/concepts/assets/software-defined-assets#a-basic-software-defined-asset
 
@@ -17,10 +19,21 @@ def heart_disease_dataset():
 # relevant documentation - https://docs.dagster.io/_apidocs/libraries/dagstermill#dagstermill.define_dagstermill_asset
 
 heart_disease_jupyter_notebook = define_dagstermill_asset(
-	name="heart_disease_jupyter",
+	name="risco-doenca-cardiaca",
 	notebook_path=file_relative_path(__file__, "../notebooks/risco-doenca-cardiaca.ipynb"),
 	group_name="heart_disease_risk",
-	ins={"heart_disease": AssetIn("heart_disease_dataset")},  
+	ins={"heart_disease": AssetIn("heart_disease_dataset")},  #
+)
+
+# @repository
+# def heart_disease_risk():
+# 	 return [
+# 		  heart_disease_dataset,
+# 		  heart_disease_jupyter_notebook,
+# 	 ]
+  
+defs = Definitions(
+	assets = [heart_disease_risk, heart_disease_dataset, heart_disease_jupyter_notebook],
 )
 
 # Uncomment the code below to create a Dagster asset backed by a Noteable notebook
