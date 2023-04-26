@@ -6,6 +6,6 @@ Heart-disease-risk dagster
 pip install dagster
 dagster project from-example \
   --name Heart-disease-risk \
-  --example quickstart_etl
+  --example tutorial_notebook_assets
 cd Heart-disease-risk
 ```
