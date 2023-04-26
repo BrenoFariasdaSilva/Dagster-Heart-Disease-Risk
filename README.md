@@ -1,4 +1,4 @@
-# Heart-disease-risk
+# Heart Disease Risk
 
 # Installation:
 ```bash
