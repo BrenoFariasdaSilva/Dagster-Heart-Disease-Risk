@@ -12,6 +12,9 @@ import pandas as pd # Import the pandas library
 @asset # Decorator that marks the function as an asset (SDA - Software Defined Asset)
 def read_csv_data(): 
 	# csv is stores in the data folder that is in the same directory as the assets.py file
-	csv_file = "heart_disease_risk/data/risco_cardiaco.csv"
-	dataframe = pd.read_csv(csv_file) # Read the csv file and store it in a pandas dataframe
-	return dataframe
+	csv_file_path = "heart_disease_risk/data/risco_cardiaco.csv"
+	csv_file = pd.read_csv(csv_file_path) # Read the csv file and store it in a pandas dataframe
+
+	dataframe = pd.DataFrame(csv_file) # Create a pandas dataframe from the csv file
+	print(dataframe) # Print the pandas dataframe
+	return dataframe # Return the pandas dataframe
