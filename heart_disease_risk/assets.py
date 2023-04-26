@@ -16,5 +16,4 @@ def read_csv_data():
 	csv_file = pd.read_csv(csv_file_path) # Read the csv file and store it in a pandas dataframe
 
 	dataframe = pd.DataFrame(csv_file) # Create a pandas dataframe from the csv file
-	print(dataframe) # Print the pandas dataframe
 	return dataframe # Return the pandas dataframe
