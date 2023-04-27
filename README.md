@@ -1,6 +1,7 @@
 # Heart Disease Risk
 ## Useful documentation:
 * [Dagster](https://docs.dagster.io/tutorial)
+* [Integrate Python Jupiter Notebook with Dagster](https://docs.dagster.io/integrations/dagstermill/using-notebooks-with-dagster)
 
 # Clone the project:
 ```bash
