@@ -39,3 +39,16 @@ http://127.0.0.1:3000
 
 # Important Notes:
 ### Each file has (or should have) comments explaining what it does, the same should be applied to functions. So, if you have any doubts, please, read the comments or contact me.
+### Dagster is a project that is under development, so, some things may change in the future. From my experience, the documentation is good and there are making weekly updates. So, if you have any doubts related to error importing modules, please, check the [releases](https://github.com/dagster-io/dagster/releases) and CTRL+F the module that you are trying to import in order to see if it was removed or renamed.  
+### Also check you Dagster installation version by running one of the following commands and compare it with the latest release number:
+```bash
+dagster --version
+# OR
+make version
+```
+### If you are using a version that is not the latest, consider updating it by running one of the following commands:
+```bash
+pip install dagster dagit --upgrade
+# OR
+make upgrade
+```
