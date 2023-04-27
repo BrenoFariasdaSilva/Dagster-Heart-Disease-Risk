@@ -46,7 +46,7 @@ dagster --version
 # OR
 make version
 ```
-### If you are using a version that is not the latest, consider updating it by running one of the following commands:
+### If you are using a version that is not the latest, consider updating it by running one of the following commands, but keep in mind that it may break your code:
 ```bash
 pip install dagster dagit --upgrade
 # OR
