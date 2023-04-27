@@ -5,6 +5,7 @@
 * [Create Assets](https://docs.dagster.io/concepts/assets/software-defined-assets)
 * [Auto-materialize Assets](https://docs.dagster.io/concepts/assets/asset-auto-execution)
 * [Integrate Python Jupyter Notebook with Dagster](https://docs.dagster.io/integrations/dagstermill/using-notebooks-with-dagster)
+* [Loggers](https://docs.dagster.io/concepts/logging/loggers)
 
 # Clone the project:
 ```bash
