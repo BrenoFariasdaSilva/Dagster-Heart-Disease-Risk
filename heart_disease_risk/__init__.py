@@ -4,10 +4,10 @@ from dagster import Definitions, load_assets_from_modules
 # I moved the assets.py file from the heart_disease_risk/ to the heart_disease_risk/assets directory
 # With that in mind, i renamed the assets.py file to __init__.py
 # It allows me to import the assets from the assets directory without having to specify the file name 
-# So the import went from "from assets.assets import assets" to "from assets import assets"
+# So the import went from "from assets.assets import assets" to "from . import assets"
 # It makes the code more readable and easier to maintain
 
-from assets import assets
+from . import assets
 
 all_assets = load_assets_from_modules([assets])
 
