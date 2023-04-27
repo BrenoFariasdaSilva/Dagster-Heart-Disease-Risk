@@ -1,4 +1,4 @@
-# Heart Disease Risk
+# Heart Disease Risk - Dagster Project
 ## Useful documentation:
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
