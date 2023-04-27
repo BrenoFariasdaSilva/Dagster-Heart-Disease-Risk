@@ -5,6 +5,8 @@
 from setuptools import find_packages, setup
 
 setup(
+    author="Breno Farias",
+    version="0.0.1",
     name="heart_disease_risk",
     packages=find_packages(exclude=["heart_disease_risk_tests"]),
     install_requires=[
