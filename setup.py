@@ -1,3 +1,7 @@
+# This is a Python script that contains the configuration information for building and distributing a Python package.
+# It typically includes information such as the package name, version, author, and dependencies.
+# It can also specify scripts to be installed with the package, and other package-specific options.
+
 from setuptools import find_packages, setup
 
 setup(
