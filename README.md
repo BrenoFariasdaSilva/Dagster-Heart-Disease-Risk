@@ -1,6 +1,9 @@
 # Heart Disease Risk
 ## Useful documentation:
-* [Dagster](https://docs.dagster.io/tutorial)
+* [Dagster Full Documentation](https://docs.dagster.io/getting-started)
+* [Dagster Tutorial](https://docs.dagster.io/tutorial)
+* [Create Assets](https://docs.dagster.io/concepts/assets/software-defined-assets)
+* [Auto-materialize Assets](https://docs.dagster.io/concepts/assets/asset-auto-execution)
 * [Integrate Python Jupyter Notebook with Dagster](https://docs.dagster.io/integrations/dagstermill/using-notebooks-with-dagster)
 
 # Clone the project:
