@@ -33,3 +33,6 @@ http://127.0.0.1:3000
 * **setup.py** -> This is a Python script that contains the configuration information for building and distributing a Python package. It typically includes information such as the package name, version, author, and dependencies. It can also specify scripts to be installed with the package, and other package-specific options.
 * **setup.cfg** -> This is a configuration file that is used to specify additional options for setuptools, the package that is commonly used to build and distribute Python packages. It can include options such as the package's entry points, the location of the package's data files, and various build and distribution options.
 * **pyproject.toml** -> This is a configuration file that is used by modern Python build tools such as poetry and flit. It specifies the project's dependencies, build tool configuration, and metadata. It can also include options for building and packaging the project.
+
+# Important Notes:
+Each file has (or should have) comments explaining what it does, the same should be applied to functions. So, if you have any doubts, please, read the comments or contact me.
