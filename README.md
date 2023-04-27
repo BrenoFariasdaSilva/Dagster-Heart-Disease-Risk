@@ -12,7 +12,6 @@ cd Heart-Disease-Risk
 ```bash
 pip install dagster dagit
 ```
-```
 # How the project was created:
 ```bash
 dagster project scaffold --name heart_disease_risk
