@@ -9,7 +9,8 @@ from dagster import Definitions, load_assets_from_modules
 
 from . import assets
 
-all_assets = load_assets_from_modules([assets])
+# Load the assets from the assets/__init__.py file
+all_assets = load_assets_from_modules(modules=[assets])
 
 # The Definitions object is used to define the assets that will be used in the project
 # The assets are defined in the assets/__init__.py file

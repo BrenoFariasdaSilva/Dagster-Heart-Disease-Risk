@@ -3,6 +3,7 @@
 ## Useful documentation:
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
+* [API Docs](https://docs.dagster.io/_apidocs)
 * [Create Assets](https://docs.dagster.io/concepts/assets/software-defined-assets)
 * [Dagstermill Asset](https://docs.dagster.io/_apidocs/libraries/dagstermill#dagstermill.define_dagstermill_asset)
 * [Definitions](https://docs.dagster.io/_apidocs/definitions#dagster.Definitions)
