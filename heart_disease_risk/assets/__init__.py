@@ -5,7 +5,7 @@
 # Assets can be manually materialized (GUI) or automatically materialized (https://docs.dagster.io/_apidocs/ops#dagster.AssetMaterialization)
 
 from dagster import asset, file_relative_path # Import the asset decorator
-from dagstermill import define_dagstermill_asset # Import the define_dagstermill_solid decorator
+from dagstermill import define_dagstermill_asset # Import the define_dagstermill_asset decorator
 import pandas as pd # Import the pandas library
 
 # Function that reads the data from the csv file and stores it in a pandas dataframe
@@ -21,6 +21,7 @@ def read_csv_data():
 
 # The define_dagstermill_asset decorator is used to create a dagstermill asset
 # The decorator returns a dagstermill asset
+# Importante Note: define_dagstermill_solid is deprecated and will be removed in a future release. Use define_dagstermill_asset instead.
 heart_disease_risk_jupyter_notebook = define_dagstermill_asset(
 	name = "heart_disease_risk_jupyter", # Name of the asset
 	notebook_path = file_relative_path(__file__, "../notebooks/risco-doenca-cardiaca.ipynb"), # Path to the notebook that will be used to create the asset
