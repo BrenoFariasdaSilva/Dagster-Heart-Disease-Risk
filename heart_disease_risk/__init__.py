@@ -1,4 +1,5 @@
 from dagster import Definitions, load_assets_from_modules
+from dagstermill import local_output_notebook_io_manager
 
 # If you move the assets.py file to a different directory than the project root, you will need to update the import statement below.
 # I moved the assets.py file from the heart_disease_risk/ to the heart_disease_risk/assets directory
@@ -12,6 +13,7 @@ from . import assets
 # Load the assets from the assets/__init__.py file
 all_assets = load_assets_from_modules(modules=[assets])
 
+
 # The Definitions object is used to define the assets that will be used in the project
 # The assets are defined in the assets/__init__.py file
 # The assets are loaded from the assets/__init__.py file and stored in the all_assets variable
@@ -19,4 +21,8 @@ all_assets = load_assets_from_modules(modules=[assets])
 # "Repositories" is a collection of definitions, but that name is deprecated and was replaced by "Definitions"
 defs = Definitions(
     assets=all_assets,
+    # define the resources that will be used in the project
+    resources={
+        "jupyter_notebook": local_output_notebook_io_manager,
+    },
 )
