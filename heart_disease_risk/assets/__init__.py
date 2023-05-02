@@ -23,6 +23,6 @@ def read_csv_data():
 # The decorator returns a dagstermill asset
 heart_disease_risk_jupyter_notebook = define_dagstermill_asset(
 	name = "heart_disease_risk_jupyter", # Name of the asset
-	notebook_path = file_relative_path(__file__, "../notebooks/heart_disease_risk.ipynb"), # Path to the notebook that will be used to create the asset
+	notebook_path = file_relative_path(__file__, "../notebooks/risco-doenca-cardiaca.ipynb"), # Path to the notebook that will be used to create the asset
 	group_name = "heart_disease_risk", # Name of the group that the asset belongs to. It should be the same as the name of the directory that the notebook is in
 ) # Create a dagstermill asset
