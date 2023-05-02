@@ -11,6 +11,10 @@ from . import assets
 
 all_assets = load_assets_from_modules([assets])
 
+# The Definitions object is used to define the assets that will be used in the project
+# The assets are defined in the assets/__init__.py file
+# The assets are loaded from the assets/__init__.py file and stored in the all_assets variable
+# "Repositories" is a collection of definitions, but that name is deprecated and was replaced by "Definitions"
 defs = Definitions(
     assets=all_assets,
 )

@@ -4,6 +4,8 @@
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
 * [Create Assets](https://docs.dagster.io/concepts/assets/software-defined-assets)
+* [Dagstermill Asset](https://docs.dagster.io/_apidocs/libraries/dagstermill#dagstermill.define_dagstermill_asset)
+* [Definitions](https://docs.dagster.io/_apidocs/definitions#dagster.Definitions)
 * [Auto-materialize Assets](https://docs.dagster.io/concepts/assets/asset-auto-execution)
 * [Integrate Python Jupyter Notebook with Dagster](https://docs.dagster.io/integrations/dagstermill/using-notebooks-with-dagster)
 * [Loggers](https://docs.dagster.io/concepts/logging/loggers)
