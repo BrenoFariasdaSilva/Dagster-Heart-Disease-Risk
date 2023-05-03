@@ -10,6 +10,7 @@
 * [Auto-materialize Assets](https://docs.dagster.io/concepts/assets/asset-auto-execution)
 * [Integrate Python Jupyter Notebook with Dagster](https://docs.dagster.io/integrations/dagstermill/using-notebooks-with-dagster)
 * [Loggers](https://docs.dagster.io/concepts/logging/loggers)
+* [Migration from @solid and @pipeline to @Ops and @Jobs](https://docs.dagster.io/0.15.7/guides/dagster/graph_job_op)
 
 # Clone the project:
 ```bash
