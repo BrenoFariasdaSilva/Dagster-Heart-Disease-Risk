@@ -36,11 +36,38 @@ def read_csv_data():
 # Function that call read_csv_data() function and print dataframe.head() 
 @op # Decorator that marks the function as a op
 def csv_head():
+	## Lendo os datasets
 	dataframe = read_csv_data() # Call the read_csv_data() function and store the dataframe in a variable
-	print(dataframe.head())
-	dataframe.describe().T.style.set_properties(**{'background-color': 'grey','color': 'white','border-color': 'white'})
-	dataframe.info()
+	# print(dataframe.head())
+	# save the dataframe.head as a csv file inside the cd../data folder
+	dataframe.head().to_csv('heart_disease_risk/processed_data/dataframeHead.csv')
+
 	
+	## Descrevendo as features numéricas
+	dataframe.describe().T.style.set_properties(**{'background-color': 'grey','color': 'white','border-color': 'white'})
+	# save the dataframe.info as a csv file
+	# dataframe.info().to_csv('heart_disease_risk/processed_data/dataframeInfo.csv')
+	
+	## Verificando valores únicos. Alguns atributos tem mais de dois valores únicos. Vamos usar OneHotEncoder para processar os dados e normalizá-los
+	dataframe.nunique()
+	dataframe =  dataframe[dataframe.columns].replace({'Yes':1, 'No':0, 'Male':1,'Female':0,'No, borderline diabetes':'0','Yes (during pregnancy)':'1' })
+	dataframe['Diabetic'] = dataframe['Diabetic'].astype(int)
+	# Save the previous dataframe as a csv file
+	# dataframe.to_csv('heart_disease_risk/processed_data/output.csv', index=False)
+
+	## Análise gráfica; distribuição de casos por sexo; 1 para homens, 0 para mulheres
+	fig, ax = plt.subplots(figsize = (13,6))
+	# generate output file that project the fig, ax
+
+	ax.hist(dataframe[dataframe["HeartDisease"]==1]["Sex"], bins=15, alpha=0.5, color="red", label="HeartDisease")
+	ax.hist(dataframe[dataframe["HeartDisease"]==0]["Sex"], bins=15, alpha=0.5, color="#fccc79", label="Normal")
+
+	ax.set_xlabel("Genero")
+	ax.set_ylabel("Frequencia")
+
+	fig.suptitle("Distribuição dos casos com SIM/NAO (Yes/no) problemas cardíacos de acordo com o Genero")
+
+	ax.legend();
 
 # Function that call csv_head() function and execute it in a process
 @job
