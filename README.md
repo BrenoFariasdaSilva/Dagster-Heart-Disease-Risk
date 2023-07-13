@@ -12,10 +12,12 @@
 * [Migration from @solid and @pipeline to @Ops and @Jobs](https://docs.dagster.io/0.15.7/guides/dagster/graph_job_op)
 
 # Clone the project:
+Simply download or clone this repository and open a terminal inside of the folder that is related to it. 
 ```bash
 git clone https://github.com/BrenoFariasdaSilva/Heart-Disease-Risk.git
 cd Heart-Disease-Risk
 ```
+
 # Installation:
 ```bash
 pip install dagster dagit
