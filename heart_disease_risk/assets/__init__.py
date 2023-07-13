@@ -41,7 +41,6 @@ def csv_head():
 	# print(dataframe.head())
 	# save the dataframe.head as a csv file inside the cd../data folder
 	dataframe.head().to_csv('heart_disease_risk/processed_data/dataframeHead.csv')
-
 	
 	## Descrevendo as features numéricas
 	dataframe.describe().T.style.set_properties(**{'background-color': 'grey','color': 'white','border-color': 'white'})
