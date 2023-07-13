@@ -4,6 +4,8 @@
 # Think of the materialization as a instance of the asset which would create a snapshot of the data at that point in time
 # Assets can be manually materialized (GUI) or automatically materialized (https://docs.dagster.io/_apidocs/ops#dagster.AssetMaterialization)
 
+import base64
+from io import BytesIO
 from dagster import asset, job, op # Import the asset, job and op decorators from the dagster library
 import pandas as pd # Import the pandas library
 import numpy as np # Import the numpy library
@@ -38,35 +40,69 @@ def read_csv_data():
 def csv_head():
 	## Lendo os datasets
 	dataframe = read_csv_data() # Call the read_csv_data() function and store the dataframe in a variable
-	# print(dataframe.head())
-	# save the dataframe.head as a csv file inside the cd../data folder
-	dataframe.head().to_csv('heart_disease_risk/processed_data/dataframeHead.csv')
+
+	#Selecionando atributos
+	X = dataframe.drop(columns =['HeartDisease'], axis = 1)
+
+	#Selecionando variável alvo (teve ou não doença cardíaca)
+	y = dataframe['HeartDisease']
+
+	# Separando treinamento e teste
+	from sklearn.model_selection import train_test_split
+	X_train, X_test, y_train, y_test = train_test_split(X, y, shuffle = True, test_size = 0.2, random_state = 44)
+
+	# print('Shape of training feature:', X_train.shape)
+	# print('Shape of testing feature:', X_test.shape)
+	# print('Shape of training label:', y_train.shape)
+	# print('Shape of training label:', y_test.shape)
+
+	#Aplicando OneHotEncoding para normalizar as variáveis categóricas
+	transformer = make_column_transformer(
+		(OneHotEncoder(sparse=False), ['AgeCategory', 'Race', 'GenHealth']),
+		remainder='passthrough')
 	
-	## Descrevendo as features numéricas
-	dataframe.describe().T.style.set_properties(**{'background-color': 'grey','color': 'white','border-color': 'white'})
-	# save the dataframe.info as a csv file
-	# dataframe.info().to_csv('heart_disease_risk/processed_data/dataframeInfo.csv')
-	
-	## Verificando valores únicos. Alguns atributos tem mais de dois valores únicos. Vamos usar OneHotEncoder para processar os dados e normalizá-los
-	dataframe.nunique()
-	dataframe =  dataframe[dataframe.columns].replace({'Yes':1, 'No':0, 'Male':1,'Female':0,'No, borderline diabetes':'0','Yes (during pregnancy)':'1' })
-	dataframe['Diabetic'] = dataframe['Diabetic'].astype(int)
-	# Save the previous dataframe as a csv file
-	# dataframe.to_csv('heart_disease_risk/processed_data/output.csv', index=False)
+	#Aplicando OneHotEncoding para normalizar as variáveis numéricas
+	transformer = make_column_transformer()
 
-	## Análise gráfica; distribuição de casos por sexo; 1 para homens, 0 para mulheres
-	fig, ax = plt.subplots(figsize = (13,6))
-	# generate output file that project the fig, ax
+	# Encode training data 
+	transformed_train = transformer.fit_transform(X_train)
+	transformed_train_data = pd.DataFrame(transformed_train, columns=transformer.get_feature_names_out())
 
-	ax.hist(dataframe[dataframe["HeartDisease"]==1]["Sex"], bins=15, alpha=0.5, color="red", label="HeartDisease")
-	ax.hist(dataframe[dataframe["HeartDisease"]==0]["Sex"], bins=15, alpha=0.5, color="#fccc79", label="Normal")
+	# Concat the two tables
+	transformed_train_data.reset_index(drop=True, inplace=True)
+	X_train.reset_index(drop=True, inplace=True)
+	X_train = pd.concat([transformed_train_data, X_train], axis=1)
 
-	ax.set_xlabel("Genero")
-	ax.set_ylabel("Frequencia")
+	# Remove old columns
+	X_train.drop(['AgeCategory', 'Race', 'GenHealth'], axis = 1, inplace = True)
 
-	fig.suptitle("Distribuição dos casos com SIM/NAO (Yes/no) problemas cardíacos de acordo com o Genero")
+	# Encode test data 
+	transformed_test = transformer.fit_transform(X_test)
+	transformed_test_data = pd.DataFrame(transformed_test, columns=transformer.get_feature_names_out())
 
-	ax.legend();
+	# Concat the two tables
+	transformed_test_data.reset_index(drop=True, inplace=True)
+	X_test.reset_index(drop=True, inplace=True)
+	X_test = pd.concat([transformed_test_data, X_test], axis=1)
+
+	# Remove old columns
+	X_test.drop(['AgeCategory', 'Race', 'GenHealth'], axis = 1, inplace = True)
+
+	print(f"len(X_test.columns): {len(X_test.columns)}")
+
+	#Fazendo normalização dos dados numéricos com scaler (valores entre 0 e 1)
+	scaler = StandardScaler()
+
+	# print(f"Type of X_train: {type(X_train)}\nType of X_test: {type(X_test)}\n")
+	# # print the type of X_train[0]
+	# print(f"Type of X_train[0]: {type(X_train.iloc[0])}\n")
+	# print(f"X_test.head(1): {X_test.head(1)}")
+
+	# # Scale training data
+	X_train = scaler.fit_transform(X_train)
+
+	# # Scale test data
+	# X_test = scaler.fit_transform(X_test)
 
 # Function that call csv_head() function and execute it in a process
 @job
