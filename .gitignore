@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 tmp*/
+
+# Heart_Disease_Risk Data
+heart_disease_risk/data/
+heart_disease_risk/processed_data/
