@@ -19,7 +19,6 @@ dagit_prod: clean
 daemon_prod: 
 	export DAGSTER_HOME="~/.dagster_home"; export DAGSTER_CLOUD_DEPLOYMENT_NAME="data-eng-prod"; dagster-daemon run
 	
-
 run_prod: dagit_prod daemon_prod
 
 setup:
@@ -28,6 +27,7 @@ setup:
 
 upgrade:
 	pip install dagster dagit --upgrade
+	pip install dagstermill --upgrade
 
 version:
 	dagster --version
