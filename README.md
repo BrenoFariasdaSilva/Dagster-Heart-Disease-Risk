@@ -14,6 +14,17 @@
 
 </div>
 
+## Table of Contents
+- [Dagster - Heart Disease Risk Model.](#dagster---heart-disease-risk-model)
+	- [Useful documentation:](#useful-documentation)
+- [Clone the project:](#clone-the-project)
+- [Installation:](#installation)
+- [How the project was created:](#how-the-project-was-created)
+- [Execute:](#execute)
+- [Open:](#open)
+- [File Hierarchy:](#file-hierarchy)
+- [Important Notes:](#important-notes)
+
 ## Useful documentation:
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
