@@ -1,4 +1,9 @@
+<div align="center">
+  
 # [Heart Disease Risk - Dagster Project](https://github.com/BrenoFariasdaSilva/Heart-Disease-Risk)
+
+</div>
+
 ## Useful documentation:
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
