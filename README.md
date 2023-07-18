@@ -4,6 +4,12 @@
 
 </div>
 
+<div align="center">
+  
+![RepoBeats Statistics](https://repobeats.axiom.co/api/embed/88a453dedb05560044e488d89fda510772faa959.svg "Repobeats analytics image")
+
+</div>
+
 ## Useful documentation:
 * [Dagster Full Documentation](https://docs.dagster.io/getting-started)
 * [Dagster Tutorial](https://docs.dagster.io/tutorial)
