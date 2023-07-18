@@ -4,6 +4,10 @@
 
 </div>
 
+<p align="center">
+  <img src="https://wakatime.com/badge/github/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk.svg" alt="wakatime" />
+</p>
+
 <div align="center">
   
 ![RepoBeats Statistics](https://repobeats.axiom.co/api/embed/88a453dedb05560044e488d89fda510772faa959.svg "Repobeats analytics image")
