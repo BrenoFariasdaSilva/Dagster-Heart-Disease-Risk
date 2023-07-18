@@ -1,6 +1,6 @@
 <div align="center">
   
-# [Dagster - Heart Disease Risk Model.](https://github.com/BrenoFariasdaSilva/Heart-Disease-Risk)
+# [Dagster - Heart Disease Risk Model.](https://github.com/BrenoFariasdaSilva/Heart-Disease-Risk) <img src="https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/blob/main/assets/Dagster.svg"  width="11%" height="11%">
 
 </div>
 
