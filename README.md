@@ -52,7 +52,8 @@ cd Heart-Disease-Risk
 
 # Installation:
 ```bash
-pip install dagster dagit
+pip install -e ".[dev]"
+pip install dagster dagit notebook
 ```
 
 or 
