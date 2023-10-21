@@ -20,7 +20,8 @@
 </div>
 
 ## Table of Contents
-- [Dagster - Heart Disease Risk Model.](#dagster---heart-disease-risk-model)
+- [Dagster - Heart Disease Risk Model. ](#dagster---heart-disease-risk-model-)
+	- [Table of Contents](#table-of-contents)
 	- [Useful documentation:](#useful-documentation)
 - [Clone the project:](#clone-the-project)
 - [Installation:](#installation)
@@ -53,6 +54,13 @@ cd Heart-Disease-Risk
 ```bash
 pip install dagster dagit
 ```
+
+or 
+
+```bash
+make dependencies
+```
+
 # How the project was created:
 ```bash
 dagster project scaffold --name heart_disease_risk
