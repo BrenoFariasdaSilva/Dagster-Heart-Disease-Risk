@@ -58,7 +58,7 @@ pip install dagster dagit
 or 
 
 ```bash
-make dependencies
+make setup
 ```
 
 # How the project was created:
