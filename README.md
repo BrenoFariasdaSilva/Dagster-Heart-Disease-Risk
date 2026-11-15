@@ -16,7 +16,6 @@
 [![GitHub Stars](https://img.shields.io/github/stars/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/stargazers)
 [![GitHub Contributors](https://img.shields.io/github/contributors/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/graphs/contributors)
 [![GitHub Created At](https://img.shields.io/github/created-at/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)
-[![GitHub Repository Size](https://img.shields.io/github/repo-size/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)
 [![Open Issues](https://img.shields.io/github/issues/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/issues)
 [![Closed Issues](https://img.shields.io/github/issues-closed/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/issues?q=is%3Aissue+is%3Aclosed)
 [![Open Pull Requests](https://img.shields.io/github/issues-pr/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk)](https://github.com/BrenoFariasdaSilva/Dagster-Heart-Disease-Risk/pulls)
